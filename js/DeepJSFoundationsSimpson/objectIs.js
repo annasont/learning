@@ -1,27 +1,29 @@
 // polyfill for 'Object.is'
 
-Object.is = function ObjectIs(a, b) {
-    if (Number.isNaN(a) === true && Number.isNaN(b) === true) {
-        return true;
-    }
-    else if (a === 0 && b === 0) {
-        if (Infinity / a === -Infinity && Infinity / b === -Infinity) {
+if (!Object.is /*== true*/) {
+    Object.is = function ObjectIs(a, b) {
+        if (Number.isNaN(a) === true && Number.isNaN(b) === true) {
             return true;
         }
-        else if (Infinity / a === Infinity && Infinity / b === Infinity) {
+        else if (a === 0 && b === 0) {
+            if (Infinity / a === -Infinity && Infinity / b === -Infinity) {
+                return true;
+            }
+            else if (Infinity / a === Infinity && Infinity / b === Infinity) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else if (a === b) {
             return true;
         }
         else {
             return false;
         }
     }
-    else if (a === b) {
-        return true;
-    }
-    else {
-        return false;
-    }
-};
+}
 
 console.log(Object.is(42,42) === true);
 console.log(Object.is("foo","foo") === true);
