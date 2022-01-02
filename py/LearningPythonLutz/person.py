@@ -37,12 +37,16 @@ if __name__ == "__main__":
         print(object.pay)
 
     print(anna)
+    print(rob)
+    print(tom)
+  
+    development = Department(anna, rob)
+    development.addMember(tom)
+    development.giveRaises(.20)
+    for object in (anna, rob, tom):
+        print(object.pay)
 
-    # development = Department(anna, rob)
-    # development.addMember(tom)
-    # development.giveRaises(.20)
-    # for object in (anna, rob, tom):
-    #     print(object.pay)
-
-    
+    print(anna)
+    print(rob)
+    print(tom)
 

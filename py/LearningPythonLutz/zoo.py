@@ -30,7 +30,7 @@ if __name__ == '__main__':
     spot = Animal()
     spot2 = Mammal()
     spot3 = Hacker()
-    print(spot3.speak())
+    print(spot3.reply())
     print(spot2.reply())
 
 

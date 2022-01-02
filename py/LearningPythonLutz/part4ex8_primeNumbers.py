@@ -26,8 +26,8 @@ def ifPrimeNumber2(y):
         else:
             return '%d jest liczbą pierwszą' % y
 
-print(ifPrimeNumber(15))
-print(ifPrimeNumber2(15))
+print(ifPrimeNumber(16))
+print(ifPrimeNumber2(16))
  
 import mytimer
 

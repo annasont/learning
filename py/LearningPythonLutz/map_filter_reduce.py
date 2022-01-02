@@ -67,7 +67,6 @@ print(functools.reduce(plus, L))
 print(functools.reduce(plus, L, 10))
 
 
-
 "my reduce"
 
 def myreduce(funct3, seq3):
@@ -78,5 +77,4 @@ def myreduce(funct3, seq3):
 
 print(myreduce(plus, L))
 print(myreduce(multiply, L))
-
 

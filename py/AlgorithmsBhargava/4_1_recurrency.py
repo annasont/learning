@@ -22,3 +22,4 @@ def sum2(list):
 
 z = [1, 2, 3]
 print (sum2(z))
+

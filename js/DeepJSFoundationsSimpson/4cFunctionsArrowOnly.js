@@ -11,14 +11,14 @@ let paidStudentsToEnroll = () => [
     ...currentEnrollment,
     ...(
         studentRecords.filter(
-            record => record.paid === true && (!currentEnrollment.includes(record.id)))
+            record => record.paid && (!currentEnrollment.includes(record.id)))
         .map(record => record.id)
     )
 ]
 
 let remindUnpaid = recordIds => 
     printRecords(
-        studentRecords.filter((record) => record.paid === false && (recordIds.includes(record.id)))
+        studentRecords.filter((record) => !record.paid && (recordIds.includes(record.id)))
         .map(record => record.id)
     );
 

@@ -4,6 +4,7 @@ d2 = {'a':10, 'y':20, 'z':30}
 # wbudowane metody copy oraz łączenie słowników:
 # dcopy = d.copy()
 # d.update(d2)
+# print(dcopy)
 # print(d)
 
 l = [1, 2, 3]
